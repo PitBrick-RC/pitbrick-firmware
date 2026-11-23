@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PitBrick update</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10.4.0/dist/web/install-button.js?module"></script>
+<style>
+  :root { --bg:#111; --fg:#eee; --grijs:#9a9a9a; --merk:#FF9800; --kaart:#1c1c1c; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f6f6f6; --fg:#111; --grijs:#555; --kaart:#fff; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+  main { max-width:640px; margin:0 auto; padding:32px 16px; }
+  h1 { font-size:2rem; margin:0 0 4px; } h1 span { color:var(--merk); }
+  .sub { color:var(--grijs); margin:0 0 24px; }
+  .kaart { background:var(--kaart); border-radius:12px; padding:20px; margin:16px 0; }
+  ol { padding-left:20px; } li { margin:6px 0; }
+  esp-web-install-button button[slot] { background:var(--merk); color:#111; border:0; border-radius:8px; padding:12px 24px; font-size:1.1rem; font-weight:600; cursor:pointer; }
+  .klein { color:var(--grijs); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pit<span>Brick</span> update</h1>
+  <p class="sub">Firmware update via USB &middot; Firmware-Update per USB &middot; Firmware bijwerken via USB</p>
+
+  <div class="kaart"><b>First release coming soon</b> &middot; Eerste versie volgt binnenkort &middot; Erste Version folgt bald</div>
+
+  <div class="kaart">
+    <ol>
+      <li>Use <b>Chrome</b> or <b>Edge</b> on a computer (not Safari, not a phone).</li>
+      <li>Switch the PitBrick on and connect it with a USB-C <b>data</b> cable.</li>
+      <li>Click the button below, choose the PitBrick port and click <b>Install</b>.</li>
+      <li>Wait until it says it is done (about 1 minute). Your settings stay saved.</li>
+    </ol>
+    <esp-web-install-button manifest="manifest.json">
+      <button slot="activate">Install / Installeren / Installieren</button>
+      <span slot="unsupported">This browser cannot do this. Please use Chrome or Edge on a computer.</span>
+      <span slot="not-allowed">This page must be opened via https.</span>
+    </esp-web-install-button>
+  </div>
+
+  <div class="kaart">
+    <b>NL</b> &ndash; Gebruik Chrome of Edge op een computer, zet de PitBrick aan, sluit hem aan met een USB-C-datakabel en klik op de knop. Je instellingen blijven bewaard.<br>
+    <b>DE</b> &ndash; Chrome oder Edge am Computer verwenden, PitBrick einschalten, mit USB-C-Datenkabel verbinden und auf den Knopf klicken. Deine Einstellungen bleiben erhalten.
+  </div>
+
+  <div class="kaart">
+    <b>What's new / Wat is nieuw / Was ist neu</b>
+    <p class="klein">See <a href="https://github.com/PitBrick-RC/pitbrick-firmware/releases">releases</a>.</p>
+  </div>
+  <p class="klein">pitbrick.com</p>
+</main>
+</body>
+</html>
